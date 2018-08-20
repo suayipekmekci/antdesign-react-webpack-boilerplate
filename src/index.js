@@ -3,12 +3,12 @@ import React from 'react';
 import { render } from 'react-dom';
 import App from './layouts/App';
 
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
+import 'antd/dist/antd.css';
 import './common/awesome/scss/font-awesome.scss';
 import './common/styles/index.scss';
 
 const root = document.createElement('div');
+root.setAttribute("id", "layoutContent");
 document.body.appendChild(root)
 
 render(<App />, root)

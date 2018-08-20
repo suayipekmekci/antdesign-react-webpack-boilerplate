@@ -3,3 +3,11 @@
 body{
   background: $body;
 }
+
+#layoutContent{
+  height: 100%;
+
+  .layoutContentInner{
+    height: 100%;
+  }
+}

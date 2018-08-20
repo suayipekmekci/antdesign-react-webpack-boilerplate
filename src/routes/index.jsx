@@ -15,17 +15,7 @@ const routes = [
         component: Home
     },
     {
-        path: '/list',
-        exact: true,
-        component: Home
-    },
-    {
         path: '/home',
-        exact: true,
-        component: Home
-    },
-    {
-        path: '/todo',
         exact: true,
         component: Home
     }

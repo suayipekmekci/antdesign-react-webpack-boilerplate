@@ -1,9 +1,9 @@
 # React Webpack Starter Basic Starter 
-boilerplate for React 16 & Webpack 4.    
+boilerplate for React 16 & Webpack 4 (Ant-Design).    
   
 ## Features 
 * Hot Module Replacement    
-* Bootstrap    
+* Ant-Design    
 * Fontawesome    
 * React Router    
 * React Redux  
@@ -13,7 +13,7 @@ boilerplate for React 16 & Webpack 4.
   
 ```bash
 #Clone project into your local  
-git clone https://github.com/suayipekmekci/basic-react-webpack-boilerplate.git    
+git clone https://github.com/suayipekmekci/antdesign-react-webpack-boilerplate.git   
 #Install dependencies 
 npm install   
 #Serve on localhost:8080 
@@ -33,7 +33,7 @@ In your webpack.common.js :
  favicon: 'src/common/images/favicon.ico',  //your favicon  
   meta: {  //your meta tags  
   viewport: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0',    
- description: 'React 16 + Webpack 4 + Fontawesome + Bootstrap + Hotreolad'    
+ description: 'React 16 + Webpack 4 + Fontawesome + Ant-Design + Hotreolad'    
   },    
  minify: true, // minify your index.html {true,false}  
  }) ],  

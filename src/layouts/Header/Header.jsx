@@ -1,33 +1,33 @@
 import React from 'react';
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
-
+import { Layout, Icon } from 'antd';
+const { Header } = Layout;
 import './style.scss';
 
-class Home extends React.Component {
+class HeaderComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      collapsed: false,
+    };
+    this.toggle = this.toggle.bind(this);
+  }
+  toggle = () => {
+    this.props.sidebarCollapse(!this.state.collapsed);
+    this.setState({
+      collapsed: !this.state.collapsed,
+    });
+  }
   render() {
     return (
-      <div id="headerContainer">
-        <Navbar inverse collapseOnSelect>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <a href="#/">React Webpack</a>
-            </Navbar.Brand>
-            <Navbar.Toggle />
-          </Navbar.Header>
-          <Navbar.Collapse>
-            <Nav pullRight>
-              <NavItem eventKey={1} href="#/home">
-                HOME
-              </NavItem>
-              <NavItem eventKey={2} href="#/about">
-                ABOUT
-              </NavItem>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-      </div>
+      <Header id="headerContainer">
+        <Icon
+          className="trigger sidebarTrigger"
+          type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
+          onClick={this.toggle}
+        />
+      </Header>
     );
   }
 }
 
-export default Home;
+export default HeaderComponent;
