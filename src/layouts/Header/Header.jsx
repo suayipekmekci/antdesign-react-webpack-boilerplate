@@ -1,33 +1,34 @@
 import React from 'react';
-import { Layout, Icon } from 'antd';
-const { Header } = Layout;
+import { Layout } from 'antd';
+import {
+  MenuUnfoldOutlined,
+  MenuFoldOutlined
+} from '@ant-design/icons';
+const { Header, Sider, Content } = Layout;
+
 import './style.scss';
 
 class HeaderComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      collapsed: false,
-    };
-    this.toggle = this.toggle.bind(this);
-  }
+  state = {
+    collapsed: false,
+  };
   toggle = () => {
     this.props.sidebarCollapse(!this.state.collapsed);
     this.setState({
       collapsed: !this.state.collapsed,
     });
-  }
+  };
   render() {
     return (
       <Header id="headerContainer">
-        <Icon
-          className="trigger sidebarTrigger"
-          type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
-          onClick={this.toggle}
-        />
+        {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+          className: 'trigger sidebarTrigger',
+          onClick: this.toggle,
+        })}
       </Header>
     );
   }
 }
 
 export default HeaderComponent;
+

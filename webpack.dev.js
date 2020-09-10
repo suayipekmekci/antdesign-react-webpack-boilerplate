@@ -13,5 +13,10 @@ module.exports = merge(common, {
     stats: 'errors-only',
     inline: true
   },
+  resolve: {
+    alias: {
+      'react-dom': '@hot-loader/react-dom'
+    }
+  },
   mode: "development"
 });

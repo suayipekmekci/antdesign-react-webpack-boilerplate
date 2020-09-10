@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 
 import Home from '../views/Home';
+import About from '../views/About';
 import NotFound from '../views/NotFound';
 
 const routes = [
@@ -18,6 +19,11 @@ const routes = [
         path: '/home',
         exact: true,
         component: Home
+    },
+    {
+        path: '/about',
+        exact: true,
+        component: About
     }
 ];
 
